@@ -76,7 +76,7 @@ def game():
 
 
         win.refresh()
-        time.sleep(0.05)
+        time.sleep(0.1)
 
     win.clear()
     win.nodelay(0)
@@ -95,5 +95,8 @@ def game():
     if q == 32:
         win.clear()
         game()
+    elif q == 10:
+        curses.endwin()
+        
 if __name__ == '__main__':
     game()
